@@ -30,7 +30,7 @@ class PublicClient(object):
     def _get(self, path, params=None):
         """Perform get request"""
 
-        r = requests.get(self.url + path, params=params, timeout=30)
+        r = requests.get(self.url + path, params=params, timeout=1)
         # r.raise_for_status()
         return r.json()
 
