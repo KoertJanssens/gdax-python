@@ -21,7 +21,7 @@ class AuthenticatedClient(PublicClient):
         self.auth = GdaxAuth(key, b64secret, passphrase)
 
     def get_account(self, account_id):
-        r = requests.get(self.url + '/accounts/' + account_id, auth=self.auth, timeout=30)
+        r = requests.get(self.url + '/accounts/' + account_id, auth=self.auth, timeout=1)
         # r.raise_for_status()
         return r.json()
 
